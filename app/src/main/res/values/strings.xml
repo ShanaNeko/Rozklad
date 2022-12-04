@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RozkładNaCzynnikiPierwsze</string>
+    <string name="podaj_liczbe">Podaj liczbe</string>
+    <string name="wylicz">Wylicz</string>
+    <string name="rozk_ad_na_czynniki_pierwsze">Rozkład na czynniki pierwsze</string>
+</resources>
