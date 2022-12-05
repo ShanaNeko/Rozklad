@@ -7,31 +7,41 @@ import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.b1).setOnClickListener() {
             val liczba = findViewById<EditText>(R.id.liczba)
-            var n = liczba.text.toString().toInt()
+            val n = liczba.text.toString().toInt()
             var array = arrayOf<Int>()
                 var i = 2
-                while (n != 1) {
-                if (n % i == 0) {
-                    array += i
-                    n /= i;
-                } else {
-                    i++;
-                }
+                var e = n
+                while (e != 1) {
+                    while (e % i == 0) {
+                        array += i
+                        e /= i
+                    }
+                    ++i; }
                     val a = AlertDialog.Builder(this)
+                    val liczby= array.map { it }.toString()
                     a.setTitle("Rozkład na czynniki pierwsze")
-                    a.setMessage("Rozkład liczby $n wynosi: " + array)
-                    a.show();
-            }
+                    a.setMessage("Rozkład liczby $n wynosi: " + liczby)
+                    a.show()
+        }
             }
 
         }
-    }
+
+// poniżej są notatki i pomoce z internetu
+
+// miałam problemy z stringem i tutaj znalazłam pomoc: https://stackoverflow.com/questions/45823162/how-to-convert-string-array-to-int-array-in-kotlin
+//  dokładniej to ta linijka kodu;
+// val ints = ints.map { it.toInt() }.toTypedArray()
+// użyta w linii 28
+
+// a tu jest kod z c++, którym się posłużyłam jako podstawa;
 
 //cout<<"Podaj liczbę: ";
 //cin>>n;

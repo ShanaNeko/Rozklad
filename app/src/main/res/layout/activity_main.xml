@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#471313"
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -22,28 +23,49 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="0dp"
+            android:background="#F49797"
+            android:fontFamily="casual"
             android:hint="@string/podaj_liczbe"
-            android:textColorHint="#616161"
+            android:textAlignment="center"
+            android:textColor="#471313"
+            android:textColorHighlight="#F49797"
+            android:textColorHint="#471313"
+            android:textColorLink="#F49797"
+            android:textSize="24sp"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="188dp"
-        android:layout_height="22dp"
+        android:layout_width="294dp"
+        android:layout_height="108dp"
+        android:fontFamily="casual"
         android:text="@string/rozk_ad_na_czynniki_pierwsze"
+        android:textAlignment="center"
+        android:textColor="#F49797"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.653" />
+        app:layout_constraintVertical_bias="0.713" />
 
     <Button
         android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="136dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#F49797"
+        android:fontFamily="casual"
         android:text="@string/wylicz"
+        android:textAlignment="center"
+        android:textColor="#471313"
+        android:textColorHighlight="#F49797"
+        android:textColorHint="#471313"
+        android:textColorLink="#F49797"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
